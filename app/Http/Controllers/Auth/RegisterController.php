@@ -58,7 +58,7 @@ class RegisterController extends Controller
             ]);
 
             // Redirect to login with success message
-            return redirect()->route('login')
+            return redirect()->route('admin.login')
                 ->with('status', 'Registration successful! Please login.');
 
         } catch (\Exception $e) {

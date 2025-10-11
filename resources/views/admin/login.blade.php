@@ -113,6 +113,20 @@
                     <form method="POST" action="{{ route('admin.login.submit') }}" class="space-y-6">
                         @csrf
                         
+                        <!-- Display Status Message (Registration Success) -->
+                        @if(session('status'))
+                            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0">
+                                        <i data-feather="check-circle" class="text-green-500"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="text-sm text-green-700">{{ session('status') }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                        
                         <!-- Display Laravel Validation Errors -->
                         @if($errors->any())
                             <div class="error-message">
