@@ -20,6 +20,13 @@ Route::get('/admin/register', function () {
     return view('admin.register');
 })->name('admin.register');
 
+Route::get('/user/login', function () {
+    return view('user.login');
+})->name('user.login');
+
+Route::get('/user/register', function () {
+    return view('user.register');
+})->name('user.register');
 
 
 // Custom Registration Routes (Keep this version)

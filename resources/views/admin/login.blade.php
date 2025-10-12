@@ -26,7 +26,7 @@
         }
         
         .login-left {
-            background: linear-gradient(135deg, #68D6EC 0%, #4a9ff5 100%);
+            background: linear-gradient(135deg, #3DA6C1 0%, #2C8AA6 100%);
         }
         
         .error-message {
@@ -40,19 +40,19 @@
         }
         
         .btn-primary {
-            background-color: #68D6EC;
+            background-color: #3DA6C1;
             transition: all 0.3s ease;
         }
         
         .btn-primary:hover {
-            background-color: #4a9ff5;
+            background-color: #2C8AA6;
             transform: translateY(-2px);
             box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
         }
         
         .form-input:focus {
-            border-color: #68D6EC;
-            box-shadow: 0 0 0 3px rgba(104, 214, 236, 0.2);
+            border-color: #3DA6C1;
+            box-shadow: 0 0 0 3px rgba(61, 166, 193, 0.2);
         }
     </style>
 </head>
@@ -113,7 +113,6 @@
                     <form method="POST" action="{{ route('admin.login.submit') }}" class="space-y-6">
                         @csrf
                         
-                        <!-- Display Status Message (Registration Success) -->
                         @if(session('status'))
                             <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
                                 <div class="flex items-center">
@@ -127,7 +126,6 @@
                             </div>
                         @endif
                         
-                        <!-- Display Laravel Validation Errors -->
                         @if($errors->any())
                             <div class="error-message">
                                 <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded">
@@ -143,7 +141,6 @@
                             </div>
                         @endif
 
-                        <!-- Display Success Message -->
                         @if(session('success'))
                             <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
                                 <div class="flex items-center">
@@ -157,43 +154,39 @@
                             </div>
                         @endif
                         
-                        <!-- Email Field -->
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
                             <div class="relative rounded-md shadow-sm">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <i data-feather="mail" class="text-gray-400"></i>
                                 </div>
-                                <input type="email" id="email" name="email" value="{{ old('email') }}" required class="form-input block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#68D6EC] focus:border-[#68D6EC]" placeholder="you@example.com">
+                                <input type="email" id="email" name="email" value="{{ old('email') }}" required class="form-input block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3DA6C1] focus:border-[#3DA6C1]" placeholder="you@example.com">
                             </div>
                         </div>
                         
-                        <!-- Password Field -->
                         <div>
                             <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
                             <div class="relative rounded-md shadow-sm">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <i data-feather="lock" class="text-gray-400"></i>
                                 </div>
-                                <input type="password" id="password" name="password" required class="form-input block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#68D6EC] focus:border-[#68D6EC]" placeholder="••••••••">
+                                <input type="password" id="password" name="password" required class="form-input block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#3DA6C1] focus:border-[#3DA6C1]" placeholder="••••••••">
                             </div>
                         </div>
                         
-                        <!-- Remember Me & Forgot Password -->
                         <div class="flex items-center justify-between">
                             <div class="flex items-center">
-                                <input id="remember" name="remember" type="checkbox" class="h-4 w-4 text-[#68D6EC] focus:ring-[#68D6EC] border-gray-300 rounded" {{ old('remember') ? 'checked' : '' }}>
+                                <input id="remember" name="remember" type="checkbox" class="h-4 w-4 text-[#3DA6C1] focus:ring-[#3DA6C1] border-gray-300 rounded" {{ old('remember') ? 'checked' : '' }}>
                                 <label for="remember" class="ml-2 block text-sm text-gray-700">Remember me</label>
                             </div>
                             
                             <div class="text-sm">
-                                <a href="{{ route('admin.password.request') }}" class="font-medium text-[#68D6EC] hover:text-[#4a9ff5]">Forgot your password?</a>
+                                <a href="{{ route('admin.password.request') }}" class="font-medium text-[#3DA6C1] hover:text-[#2C8AA6]">Forgot your password?</a>
                             </div>
                         </div>
                         
-                        <!-- Submit Button -->
                         <div>
-                            <button type="submit" class="btn-primary w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#68D6EC]">
+                            <button type="submit" class="btn-primary w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#3DA6C1]">
                                 Sign in
                             </button>
                         </div>
@@ -202,7 +195,7 @@
                     <div class="mt-8 text-center">
                         <p class="text-sm text-gray-600">
                             Don't have an account?
-                            <a href="{{ route('admin.register') }}" class="font-medium text-[#68D6EC] hover:text-[#4a9ff5]">Register</a>
+                            <a href="{{ route('admin.register') }}" class="font-medium text-[#3DA6C1] hover:text-[#2C8AA6]">Register</a>
                         </p>
                     </div>
                 </div>
@@ -211,10 +204,8 @@
     </div>
 
     <script>
-        // Initialize Feather icons
         feather.replace();
         
-        // Add shake animation on form errors
         @if($errors->any())
             document.addEventListener('DOMContentLoaded', function() {
                 const form = document.querySelector('form');
