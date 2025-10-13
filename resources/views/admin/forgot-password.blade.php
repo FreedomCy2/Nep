@@ -107,7 +107,7 @@
                     </form>
 
                     <div class="mt-6 text-center">
-<a href="{{ url('admin') }}" class="text-primary-500 hover:text-primary-600 font-medium flex items-center justify-center">
+<a href="{{ route('admin.login') }}" class="text-primary-500 hover:text-primary-600 font-medium flex items-center justify-center">
     <i data-feather="arrow-left" class="mr-1"></i> Back to Login
 </a>
                     </div>
