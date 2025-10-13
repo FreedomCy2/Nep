@@ -28,6 +28,10 @@ Route::get('/user/register', function () {
     return view('user.register');
 })->name('user.register');
 
+Route::get('/user/introduction', function () {
+    return view('user.introduction');
+})->name('user.introduction');
+
 
 // Custom Registration Routes (Keep this version)
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');

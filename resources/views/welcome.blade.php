@@ -65,7 +65,7 @@
 
         <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <!-- Patient Login Card -->
-            <a href="{{ route('user.login') }}" class="card-hover">
+            <a href="{{ route('user.introduction') }}" class="card-hover">
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 h-full glow">
                     <div class="p-8">
                         <div class="flex justify-center mb-6">

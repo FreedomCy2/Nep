@@ -200,7 +200,7 @@
         <!-- Login Link -->
         <p class="text-center text-gray-500 text-sm">
           Already have an account? 
-          <a href="{{ route('login') }}" class="text-aqua hover:text-aquaDark font-medium">Sign in</a>
+          <a href="{{ route('admin.login') }}" class="text-aqua hover:text-aquaDark font-medium">Sign in</a>
         </p>
       </div>
     </form>
