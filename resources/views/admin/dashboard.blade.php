@@ -391,9 +391,8 @@
             });
             
             confirmLogout.addEventListener('click', function() {
-                // In a real Laravel application, this would submit the form
-                // For demo purposes, we'll just redirect to login page
-                window.location.href = '/login';
+                // Redirect to your login.blade.php file
+                window.location.href = '/admin/login';
             });
         });
     </script>
