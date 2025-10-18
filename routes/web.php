@@ -12,13 +12,6 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('/admin/login', function () {
-    return view('admin.login');
-})->name('admin.login');
-
-Route::get('/admin/register', function () {
-    return view('admin.register');
-})->name('admin.register');
 
 Route::get('/user/login', function () {
     return view('user.login');
@@ -32,6 +25,33 @@ Route::get('/user/introduction', function () {
     return view('user.introduction');
 })->name('user.introduction');
 
+Route::get('/user/booking', function () {
+    return view('user.booking');
+})->name('user.booking');
+
+Route::get('/user/service', function () {
+    return view('user.service');
+})->name('user.service');
+
+Route::get('/user/information', function () {
+    return view('user.information');
+})->name('user.information');
+
+Route::get('/user/confirm', function () {
+    return view('user.confirm');
+})->name('user.confirm');
+
+Route::get('/user/forgotpassword', function () {
+    return view('user.forgotpassword');
+})->name('user.forgotpassword');
+
+Route::get('/user/cancel', function () {
+    return view('user.cancel');
+})->name('user.cancel');
+
+Route::get('/user/profile', function () {
+    return view('user.profile');
+})->name('user.profile');
 
 // Custom Registration Routes (Keep this version)
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
@@ -79,3 +99,7 @@ Route::prefix('admin')->group(function () {
 });
 // Auth scaffolding (e.g. login, logout, etc.)
 require __DIR__.'/auth.php';
+
+
+
+
