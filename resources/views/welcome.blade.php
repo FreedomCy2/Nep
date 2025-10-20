@@ -60,7 +60,6 @@
                     <img src="ClinicLogo.png" alt="ClinicFlow Logo" class="w-32 h-32 rounded-full object-cover shadow-lg">
 </div>
             <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Welcome to ClinicFlow</h1>
-            <h3>Bahit was here</h3>
             <p class="text-xl text-gray-600 max-w-2xl mx-auto">Streamlined healthcare management for modern clinics</p>
         </div>
 
